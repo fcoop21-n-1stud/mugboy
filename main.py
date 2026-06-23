@@ -20,4 +20,6 @@ class Game():
         while run == True: 
             self.screen.fill(WHITE)
             pygame.display.set_mode((self.WIDTH, self.HEIGHT))
-
+            for event in pygame.event.get():
+                if event.type == pygame.quit:
+                    run = False
