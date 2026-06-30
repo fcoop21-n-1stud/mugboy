@@ -8,7 +8,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("mugman")
 WHITE = (255,255,255)
 backround = pygame.image.load("newmenu.jpg")
-
+fileMU = ("mad.mp3")
 class Game():
     
     def __init__(self):
@@ -18,8 +18,9 @@ class Game():
         self.clock = pygame.time.Clock()
     pygame.init()
     pygame.mixer.init()
-    pygame.mixer.music.load("slowsun.mp3")
-    pygame.mixer.music.play(-1)  
+    pygame.mixer.music.load(fileMU)
+    pygame.mixer.music.play(-1)
+    pygame.event.wait()
     def play(self):
         pygame.init()
         run = True
